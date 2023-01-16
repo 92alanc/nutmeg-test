@@ -3,6 +3,8 @@ package com.alancamargo.nutmegtest.core.di
 import android.content.Context
 import com.alancamargo.nutmegtest.core.database.LocalDatabaseProvider
 import com.alancamargo.nutmegtest.core.database.LocalDatabaseProviderImpl
+import com.alancamargo.nutmegtest.core.log.Logger
+import com.alancamargo.nutmegtest.core.log.LoggerImpl
 import com.alancamargo.nutmegtest.core.network.ApiProvider
 import com.alancamargo.nutmegtest.core.network.ApiProviderImpl
 import dagger.Module
@@ -31,4 +33,8 @@ internal object CoreModule {
     fun provideLocalDatabaseProvider(
         @ApplicationContext context: Context
     ): LocalDatabaseProvider = LocalDatabaseProviderImpl(context)
+
+    @Provides
+    @Singleton
+    fun provideLogger(impl: LoggerImpl): Logger = impl
 }
