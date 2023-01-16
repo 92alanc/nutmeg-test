@@ -1,6 +1,7 @@
 apply from: 'versions.gradle'
 
 ext {
+    android_activity = "androidx.activity:activity-ktx:$android_activity_version"
     android_appcompat = "androidx.appcompat:appcompat:$android_appcompat_version"
     android_core = "androidx.core:core-ktx:$android_core_version"
     android_material = "com.google.android.material:material:$android_material_version"
