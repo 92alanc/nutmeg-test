@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="shimmer_thumbnail_size">80dp</dimen>
+    <dimen name="shimmer_title_width">200dp</dimen>
+    <dimen name="shimmer_title_height">20dp</dimen>
+    <dimen name="shimmer_user_name_width">100dp</dimen>
+    <dimen name="shimmer_user_name_height">16dp</dimen>
+</resources>
