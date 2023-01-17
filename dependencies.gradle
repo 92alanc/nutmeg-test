@@ -5,6 +5,7 @@ ext {
     android_appcompat = "androidx.appcompat:appcompat:$android_appcompat_version"
     android_core = "androidx.core:core-ktx:$android_core_version"
     android_material = "com.google.android.material:material:$android_material_version"
+    coroutines_test = "org.jetbrains.kotlinx:kotlinx-coroutines-test:$coroutines_test_version"
     hilt_android = "com.google.dagger:hilt-android:$hilt_version"
     hilt_compiler = "com.google.dagger:hilt-compiler:$hilt_version"
     junit = "junit:junit:$junit_version"
