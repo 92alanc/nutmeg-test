@@ -34,6 +34,8 @@ dependencies {
     kapt "$room_compiler"
 
     testImplementation "$junit"
+    testImplementation "$mockk_android"
+    testImplementation "$truth"
 
     androidTestImplementation 'androidx.test.ext:junit:1.1.5'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
