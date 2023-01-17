@@ -12,8 +12,8 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent">
         <View
-            android:layout_width="@dimen/shimmer_thumbnail_size"
-            android:layout_height="@dimen/shimmer_thumbnail_size"
+            android:layout_width="@dimen/thumbnail_size"
+            android:layout_height="@dimen/thumbnail_size"
             android:background="@drawable/shape_rounded_corners_rectangle"/>
     </com.facebook.shimmer.ShimmerFrameLayout>
 
@@ -51,12 +51,12 @@
         android:id="@+id/thumbnail2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/spacing_16"
+        android:layout_marginTop="@dimen/spacing_24"
         app:layout_constraintTop_toBottomOf="@id/thumbnail1"
         app:layout_constraintStart_toStartOf="parent">
         <View
-            android:layout_width="@dimen/shimmer_thumbnail_size"
-            android:layout_height="@dimen/shimmer_thumbnail_size"
+            android:layout_width="@dimen/thumbnail_size"
+            android:layout_height="@dimen/thumbnail_size"
             android:background="@drawable/shape_rounded_corners_rectangle"/>
     </com.facebook.shimmer.ShimmerFrameLayout>
 
@@ -94,12 +94,12 @@
         android:id="@+id/thumbnail3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/spacing_16"
+        android:layout_marginTop="@dimen/spacing_24"
         app:layout_constraintTop_toBottomOf="@id/thumbnail2"
         app:layout_constraintStart_toStartOf="parent">
         <View
-            android:layout_width="@dimen/shimmer_thumbnail_size"
-            android:layout_height="@dimen/shimmer_thumbnail_size"
+            android:layout_width="@dimen/thumbnail_size"
+            android:layout_height="@dimen/thumbnail_size"
             android:background="@drawable/shape_rounded_corners_rectangle"/>
     </com.facebook.shimmer.ShimmerFrameLayout>
 
