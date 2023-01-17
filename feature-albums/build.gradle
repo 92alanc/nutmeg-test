@@ -7,7 +7,7 @@ plugins {
 }
 
 android {
-    namespace 'com.alancamargo.nutmegtest.photos'
+    namespace 'com.alancamargo.nutmegtest.albums'
     compileSdk target_sdk_version
 
     defaultConfig {
