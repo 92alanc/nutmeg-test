@@ -4,6 +4,8 @@ ext {
     android_activity = "androidx.activity:activity-ktx:$android_activity_version"
     android_appcompat = "androidx.appcompat:appcompat:$android_appcompat_version"
     android_core = "androidx.core:core-ktx:$android_core_version"
+    android_espresso_core = "androidx.test.espresso:espresso-core:$android_espresso_core_version"
+    android_junit = "androidx.test.ext:junit:$android_junit_version"
     android_material = "com.google.android.material:material:$android_material_version"
     coil = "io.coil-kt:coil:$coil_version"
     coroutines_test = "org.jetbrains.kotlinx:kotlinx-coroutines-test:$coroutines_test_version"
