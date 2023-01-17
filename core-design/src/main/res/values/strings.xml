@@ -5,4 +5,6 @@
     <string name="error_server">Our server is quite rubbish, it\'s the only one we can afford at the moment, sorry</string>
     <string name="error_generic">We\'ll get to the bottom of this, I promise!\nYours truly,\n\nA politician</string>
     <string name="try_again">Try again</string>
+    <string name="ok">OK</string>
+    <string name="error">Error</string>
 </resources>
