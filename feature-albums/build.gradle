@@ -27,8 +27,11 @@ dependencies {
     implementation "$android_appcompat"
     implementation "$android_material"
     implementation "$hilt_android"
+    implementation "$room"
+    implementation "$room_runtime"
 
     kapt "$hilt_compiler"
+    kapt "$room_compiler"
 
     testImplementation "$junit"
 
