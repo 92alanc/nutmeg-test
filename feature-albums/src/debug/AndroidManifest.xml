@@ -2,7 +2,7 @@
 
     <!-- DEBUG MANIFEST - ONLY FOR UI TESTS -->
 
-    <application>
+    <application android:usesCleartextTraffic="true">
         <activity android:name=".ui.AlbumListActivity"
             android:theme="@style/Theme.AppCompat.Light.DarkActionBar" />
     </application>

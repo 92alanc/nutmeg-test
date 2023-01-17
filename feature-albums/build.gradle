@@ -64,6 +64,7 @@ dependencies {
     androidTestImplementation "$android_espresso_core"
     androidTestImplementation "$android_junit"
     androidTestImplementation "$hilt_testing"
+    androidTestImplementation "$mock_web_server"
     androidTestImplementation "$mockk_android"
 
     kaptAndroidTest "$hilt_test_compiler"
