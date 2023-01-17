@@ -30,6 +30,7 @@ dependencies {
     implementation "$android_core"
     implementation "$android_appcompat"
     implementation "$android_material"
+    implementation "$coil"
     implementation "$hilt_android"
     implementation "$room"
     implementation "$room_runtime"
