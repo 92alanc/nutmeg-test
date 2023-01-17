@@ -16,7 +16,7 @@ android {
         versionCode version_code
         versionName "$version_name"
 
-        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        testInstrumentationRunner "com.alancamargo.nutmegtest.core.test.InstrumentedTestRunner"
     }
 
     buildTypes {
