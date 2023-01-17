@@ -19,4 +19,4 @@ rootProject.name = "Nutmeg Test"
 include ':app'
 include ':core-design'
 include ':core'
-include ':feature-photos'
+include ':feature-albums'

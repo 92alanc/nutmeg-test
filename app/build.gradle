@@ -42,7 +42,7 @@ android {
 
 dependencies {
     implementation project(':core-design')
-    implementation project(':feature-photos')
+    implementation project(':feature-albums')
 
     implementation "$android_core"
     implementation "$android_material"

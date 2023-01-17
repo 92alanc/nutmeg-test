@@ -1,4 +1,4 @@
-package com.alancamargo.nutmegtest.photos.data.model
+package com.alancamargo.nutmegtest.albums.data.model
 
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
