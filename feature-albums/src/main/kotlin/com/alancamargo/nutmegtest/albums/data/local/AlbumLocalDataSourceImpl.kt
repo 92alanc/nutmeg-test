@@ -4,10 +4,12 @@ import com.alancamargo.nutmegtest.albums.data.database.AlbumDao
 import com.alancamargo.nutmegtest.albums.data.mapping.toDb
 import com.alancamargo.nutmegtest.albums.data.mapping.toDomain
 import com.alancamargo.nutmegtest.albums.domain.model.Album
+import com.alancamargo.nutmegtest.core.log.Logger
 import javax.inject.Inject
 
 internal class AlbumLocalDataSourceImpl @Inject constructor(
-    private val dao: AlbumDao
+    private val dao: AlbumDao,
+    private val logger: Logger
 ) : AlbumLocalDataSource {
 
     override suspend fun getAlbums(): List<Album> {
@@ -15,7 +17,11 @@ internal class AlbumLocalDataSourceImpl @Inject constructor(
     }
 
     override suspend fun saveAlbum(album: Album) {
-        val dbAlbum = album.toDb()
-        dao.insertAlbum(dbAlbum)
+        try {
+            val dbAlbum = album.toDb()
+            dao.insertAlbum(dbAlbum)
+        } catch (t: Throwable) {
+            logger.error(t)
+        }
     }
 }
