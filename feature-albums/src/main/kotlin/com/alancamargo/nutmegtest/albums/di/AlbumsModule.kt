@@ -1,5 +1,7 @@
 package com.alancamargo.nutmegtest.albums.di
 
+import com.alancamargo.nutmegtest.albums.data.local.AlbumLocalDataSource
+import com.alancamargo.nutmegtest.albums.data.local.AlbumLocalDataSourceImpl
 import com.alancamargo.nutmegtest.albums.data.remote.AlbumRemoteDataSource
 import com.alancamargo.nutmegtest.albums.data.remote.AlbumRemoteDataSourceImpl
 import dagger.Binds
@@ -15,4 +17,8 @@ internal abstract class AlbumsModule {
     @Binds
     @ViewModelScoped
     abstract fun bindAlbumRemoteDataSource(impl: AlbumRemoteDataSourceImpl): AlbumRemoteDataSource
+
+    @Binds
+    @ViewModelScoped
+    abstract fun bindAlbumLocalDataSource(impl: AlbumLocalDataSourceImpl): AlbumLocalDataSource
 }

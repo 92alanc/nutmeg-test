@@ -2,6 +2,7 @@ package com.alancamargo.nutmegtest.albums.data.remote
 
 import com.alancamargo.nutmegtest.albums.data.mapping.toDomain
 import com.alancamargo.nutmegtest.albums.data.service.AlbumService
+import com.alancamargo.nutmegtest.albums.domain.model.Album
 import com.alancamargo.nutmegtest.albums.domain.model.AlbumListResult
 import com.alancamargo.nutmegtest.core.extensions.isServerError
 import retrofit2.HttpException
@@ -12,19 +13,20 @@ internal class AlbumRemoteDataSourceImpl @Inject constructor(
     private val service: AlbumService
 ) : AlbumRemoteDataSource {
 
-    override suspend fun getAlbums(): AlbumListResult {
-        return try {
-            val albumResponseList = service.getAlbums()
+    override suspend fun getAlbums(): List<Album> {
+        val albumResponseList = service.getAlbums()
 
-            val albums = albumResponseList.map { albumResponse ->
-                val userName = service.getUser(albumResponse.userId).userName
-                val thumbnailUrl = service.getPhotos(albumResponse.id).first().thumbnailUrl
+        return albumResponseList.map { albumResponse ->
+            val userName = service.getUser(albumResponse.userId).userName
+            val thumbnailUrl = service.getPhotos(albumResponse.id).first().thumbnailUrl
 
-                albumResponse.toDomain(
-                    userName = userName,
-                    thumbnailUrl = thumbnailUrl
-                )
-            }
+            albumResponse.toDomain(
+                userName = userName,
+                thumbnailUrl = thumbnailUrl
+            )
+        }
+        /*return try {
+            // get albums
 
             if (albums.isEmpty()) {
                 AlbumListResult.Empty
@@ -33,7 +35,7 @@ internal class AlbumRemoteDataSourceImpl @Inject constructor(
             }
         } catch (t: Throwable) {
             handleError(t)
-        }
+        }*/
     }
 
     private fun handleError(t: Throwable) = when (t) {
