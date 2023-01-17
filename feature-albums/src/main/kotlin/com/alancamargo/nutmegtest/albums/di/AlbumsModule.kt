@@ -6,6 +6,8 @@ import com.alancamargo.nutmegtest.albums.data.remote.AlbumRemoteDataSource
 import com.alancamargo.nutmegtest.albums.data.remote.AlbumRemoteDataSourceImpl
 import com.alancamargo.nutmegtest.albums.data.repository.AlbumRepositoryImpl
 import com.alancamargo.nutmegtest.albums.domain.repository.AlbumRepository
+import com.alancamargo.nutmegtest.albums.domain.usecase.GetAlbumsUseCase
+import com.alancamargo.nutmegtest.albums.domain.usecase.GetAlbumsUseCaseImpl
 import dagger.Binds
 import dagger.Module
 import dagger.hilt.InstallIn
@@ -27,4 +29,8 @@ internal abstract class AlbumsModule {
     @Binds
     @ViewModelScoped
     abstract fun bindAlbumRepository(impl: AlbumRepositoryImpl): AlbumRepository
+
+    @Binds
+    @ViewModelScoped
+    abstract fun bindGetAlbumsUseCase(impl: GetAlbumsUseCaseImpl): GetAlbumsUseCase
 }
