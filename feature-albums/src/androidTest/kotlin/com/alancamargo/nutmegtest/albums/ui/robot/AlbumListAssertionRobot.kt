@@ -22,7 +22,7 @@ class AlbumListAssertionRobot {
     }
 
     fun shimmerIsVisible() {
-        onViewWithId(R.id.shimmerContainer).check(matches(withChildId(R.id.shimmerRoot)))
+        onViewWithId(R.id.shimmerContainer).check(matches(withVisibleChild(R.id.shimmerRoot)))
     }
 
     fun appInfoDialogueIsVisible(mockDialogueHelper: DialogueHelper) {
@@ -37,7 +37,7 @@ class AlbumListAssertionRobot {
         }
     }
 
-    private fun withChildId(@IdRes childId: Int): Matcher<View> {
+    private fun withVisibleChild(@IdRes childId: Int): Matcher<View> {
         return object : BoundedMatcher<View, FrameLayout>(FrameLayout::class.java) {
             override fun matchesSafely(item: FrameLayout?): Boolean {
                 val child = item?.getChildAt(0)
