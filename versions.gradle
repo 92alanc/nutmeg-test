@@ -5,7 +5,7 @@ ext {
     version_code = 1
     version_name = '2023.1.0'
 
-    android_version = '7.3.1'
+    android_version = '7.4.0'
     android_activity_version = '1.6.1'
     android_appcompat_version = '1.6.0'
     android_core_version = '1.9.0'
