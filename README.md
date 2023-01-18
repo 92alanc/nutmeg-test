@@ -56,18 +56,9 @@ comparison.
 |![Light mode](screenshots/success-light.png)|![Dark mode](screenshots/success-dark.png)|
 
 **Dialogues**
-App info and no results
-|App info|No results|
-|-------|------|
-|![App info](screenshots/app-info.png)|![No results](screenshots/no-results.png)|
-
-Network and server errors
-|Network error|Server error|
-|-------|------|
-|![Network error](screenshots/network-error.png)|![Server error](screenshots/server-error.png)|
-
-Generic error
-![Generic error](screenshots/generic-error.png)
+|App info|No results|Network error|Server error|Generic error|
+|-------|------|-------|------|-------|
+|![App info](screenshots/app-info.png)|![No results](screenshots/no-results.png)|![Network error](screenshots/network-error.png)|![Server error](screenshots/server-error.png)|![Generic error](screenshots/generic-error.png)|
 
 **Loading state**
 ![Loading state](screenshots/loading.png)
