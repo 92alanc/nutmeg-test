@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/shimmerRoot"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/spacing_16">
+
+    <com.facebook.shimmer.ShimmerFrameLayout
+        android:id="@+id/thumbnail1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+        <View
+            android:layout_width="@dimen/thumbnail_size"
+            android:layout_height="@dimen/thumbnail_size"
+            android:background="@drawable/shape_rounded_corners_rectangle"/>
+    </com.facebook.shimmer.ShimmerFrameLayout>
+
+    <com.facebook.shimmer.ShimmerFrameLayout
+        android:id="@+id/title1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/spacing_8"
+        app:layout_constraintTop_toTopOf="@id/thumbnail1"
+        app:layout_constraintStart_toEndOf="@id/thumbnail1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0">
+        <View
+            android:layout_width="@dimen/shimmer_title_width"
+            android:layout_height="@dimen/shimmer_title_height"
+            android:background="@drawable/shape_rounded_corners_rectangle"/>
+    </com.facebook.shimmer.ShimmerFrameLayout>
+
+    <com.facebook.shimmer.ShimmerFrameLayout
+        android:id="@+id/userName1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/spacing_8"
+        app:layout_constraintTop_toBottomOf="@id/title1"
+        app:layout_constraintStart_toStartOf="@id/title1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0">
+        <View
+            android:layout_width="@dimen/shimmer_user_name_width"
+            android:layout_height="@dimen/shimmer_user_name_height"
+            android:background="@drawable/shape_rounded_corners_rectangle"/>
+    </com.facebook.shimmer.ShimmerFrameLayout>
+
+    <com.facebook.shimmer.ShimmerFrameLayout
+        android:id="@+id/thumbnail2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/spacing_24"
+        app:layout_constraintTop_toBottomOf="@id/thumbnail1"
+        app:layout_constraintStart_toStartOf="parent">
+        <View
+            android:layout_width="@dimen/thumbnail_size"
+            android:layout_height="@dimen/thumbnail_size"
+            android:background="@drawable/shape_rounded_corners_rectangle"/>
+    </com.facebook.shimmer.ShimmerFrameLayout>
+
+    <com.facebook.shimmer.ShimmerFrameLayout
+        android:id="@+id/title2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/spacing_8"
+        app:layout_constraintTop_toTopOf="@id/thumbnail2"
+        app:layout_constraintStart_toEndOf="@id/thumbnail2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0">
+        <View
+            android:layout_width="@dimen/shimmer_title_width"
+            android:layout_height="@dimen/shimmer_title_height"
+            android:background="@drawable/shape_rounded_corners_rectangle"/>
+    </com.facebook.shimmer.ShimmerFrameLayout>
+
+    <com.facebook.shimmer.ShimmerFrameLayout
+        android:id="@+id/userName2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/spacing_8"
+        app:layout_constraintTop_toBottomOf="@id/title2"
+        app:layout_constraintStart_toStartOf="@id/title2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0">
+        <View
+            android:layout_width="@dimen/shimmer_user_name_width"
+            android:layout_height="@dimen/shimmer_user_name_height"
+            android:background="@drawable/shape_rounded_corners_rectangle"/>
+    </com.facebook.shimmer.ShimmerFrameLayout>
+
+    <com.facebook.shimmer.ShimmerFrameLayout
+        android:id="@+id/thumbnail3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/spacing_24"
+        app:layout_constraintTop_toBottomOf="@id/thumbnail2"
+        app:layout_constraintStart_toStartOf="parent">
+        <View
+            android:layout_width="@dimen/thumbnail_size"
+            android:layout_height="@dimen/thumbnail_size"
+            android:background="@drawable/shape_rounded_corners_rectangle"/>
+    </com.facebook.shimmer.ShimmerFrameLayout>
+
+    <com.facebook.shimmer.ShimmerFrameLayout
+        android:id="@+id/title3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/spacing_8"
+        app:layout_constraintTop_toTopOf="@id/thumbnail3"
+        app:layout_constraintStart_toEndOf="@id/thumbnail3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0">
+        <View
+            android:layout_width="@dimen/shimmer_title_width"
+            android:layout_height="@dimen/shimmer_title_height"
+            android:background="@drawable/shape_rounded_corners_rectangle"/>
+    </com.facebook.shimmer.ShimmerFrameLayout>
+
+    <com.facebook.shimmer.ShimmerFrameLayout
+        android:id="@+id/userName3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/spacing_8"
+        app:layout_constraintTop_toBottomOf="@id/title3"
+        app:layout_constraintStart_toStartOf="@id/title3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0">
+        <View
+            android:layout_width="@dimen/shimmer_user_name_width"
+            android:layout_height="@dimen/shimmer_user_name_height"
+            android:background="@drawable/shape_rounded_corners_rectangle"/>
+    </com.facebook.shimmer.ShimmerFrameLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

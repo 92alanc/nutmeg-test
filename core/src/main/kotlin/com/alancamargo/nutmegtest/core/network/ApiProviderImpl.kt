@@ -1,9 +1,10 @@
 package com.alancamargo.nutmegtest.core.network
 
-import com.alancamargo.nutmegtest.core.BuildConfig
+import com.alancamargo.nutmegtest.core.di.BaseUrl
 import com.jakewharton.retrofit2.converter.kotlinx.serialization.asConverterFactory
 import kotlinx.serialization.ExperimentalSerializationApi
 import kotlinx.serialization.json.Json
+import okhttp3.HttpUrl
 import okhttp3.MediaType.Companion.toMediaType
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
@@ -13,7 +14,9 @@ import java.util.concurrent.TimeUnit
 import javax.inject.Inject
 
 @OptIn(ExperimentalSerializationApi::class)
-internal class ApiProviderImpl @Inject constructor() : ApiProvider {
+internal class ApiProviderImpl @Inject constructor(
+    @BaseUrl private val baseUrl: HttpUrl
+) : ApiProvider {
 
     private val json = Json { ignoreUnknownKeys = true }
 
@@ -22,7 +25,7 @@ internal class ApiProviderImpl @Inject constructor() : ApiProvider {
         val client = getClient()
 
         return Retrofit.Builder()
-            .baseUrl(BuildConfig.BASE_URL)
+            .baseUrl(baseUrl)
             .addConverterFactory(converterFactory)
             .client(client)
             .build()

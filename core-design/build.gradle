@@ -1,6 +1,8 @@
 plugins {
     id 'com.android.library'
+    id 'com.google.dagger.hilt.android'
     id 'kotlin-android'
+    id 'kotlin-kapt'
 }
 
 android {
@@ -11,7 +13,6 @@ android {
         minSdk min_sdk_version
         targetSdk target_sdk_version
 
-        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles "consumer-rules.pro"
     }
 }
@@ -19,4 +20,12 @@ android {
 dependencies {
     implementation "$android_core"
     implementation "$android_material"
+    implementation "$hilt_android"
+
+    kapt "$hilt_compiler"
+
+    androidTestImplementation "$hilt_testing"
+    androidTestImplementation "$mockk_android"
+
+    kaptAndroidTest "$hilt_test_compiler"
 }
