@@ -34,7 +34,8 @@ class AlbumListAssertionRobot(private val rule: ActivityScenarioRule<AlbumListAc
                     iconRes = R2.mipmap.ic_launcher_round,
                     titleRes = R2.string.app_name,
                     messageRes = R.string.app_info,
-                    buttonTextRes = R2.string.ok
+                    buttonTextRes = R2.string.ok,
+                    onButtonClicked = null
                 )
             }
         }
@@ -48,7 +49,8 @@ class AlbumListAssertionRobot(private val rule: ActivityScenarioRule<AlbumListAc
                     iconRes = R2.drawable.ic_no_results,
                     titleRes = R2.string.error,
                     messageRes = R2.string.error_no_results,
-                    buttonTextRes = R2.string.try_again
+                    buttonTextRes = R2.string.try_again,
+                    onButtonClicked = any()
                 )
             }
         }
@@ -62,7 +64,8 @@ class AlbumListAssertionRobot(private val rule: ActivityScenarioRule<AlbumListAc
                     iconRes = R2.drawable.ic_server_error,
                     titleRes = R2.string.error,
                     messageRes = R2.string.error_server,
-                    buttonTextRes = R2.string.try_again
+                    buttonTextRes = R2.string.try_again,
+                    onButtonClicked = any()
                 )
             }
         }

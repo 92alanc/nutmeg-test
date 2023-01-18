@@ -11,6 +11,7 @@ interface DialogueHelper {
         @DrawableRes iconRes: Int,
         @StringRes titleRes: Int,
         @StringRes messageRes: Int,
-        @StringRes buttonTextRes: Int
+        @StringRes buttonTextRes: Int,
+        onButtonClicked: (() -> Unit)? = null
     )
 }

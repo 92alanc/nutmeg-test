@@ -13,14 +13,16 @@ class DialogueHelperImpl @Inject internal constructor() : DialogueHelper {
         iconRes: Int,
         titleRes: Int,
         messageRes: Int,
-        buttonTextRes: Int
+        buttonTextRes: Int,
+        onButtonClicked: (() -> Unit)?
     ) {
         MaterialAlertDialogBuilder(context)
             .setTitle(titleRes)
             .setIcon(iconRes)
             .setMessage(messageRes)
-            .setNeutralButton(buttonTextRes, null)
-            .setCancelable(false)
+            .setNeutralButton(buttonTextRes) { _, _ ->
+                onButtonClicked?.invoke()
+            }.setCancelable(false)
             .show()
     }
 }
