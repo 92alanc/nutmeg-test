@@ -4,10 +4,12 @@ import androidx.test.espresso.Espresso.onView
 import androidx.test.espresso.Espresso.openActionBarOverflowOrOptionsMenu
 import androidx.test.espresso.action.ViewActions.click
 import androidx.test.espresso.matcher.ViewMatchers.withText
+import androidx.test.ext.junit.rules.ActivityScenarioRule
 import androidx.test.platform.app.InstrumentationRegistry
 import com.alancamargo.nutmegtest.albums.R
+import com.alancamargo.nutmegtest.albums.ui.AlbumListActivity
 
-class AlbumListActionRobot {
+class AlbumListActionRobot(private val rule: ActivityScenarioRule<AlbumListActivity>) {
 
     fun clickAppInfoMenuItem() {
         openActionBarOverflowOrOptionsMenu(
@@ -17,6 +19,6 @@ class AlbumListActionRobot {
     }
 
     infix fun check(block: AlbumListAssertionRobot.() -> Unit) {
-        AlbumListAssertionRobot().run(block)
+        AlbumListAssertionRobot(rule).run(block)
     }
 }

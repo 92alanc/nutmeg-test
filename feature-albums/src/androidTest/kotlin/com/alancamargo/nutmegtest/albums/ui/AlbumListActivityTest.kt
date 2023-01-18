@@ -9,6 +9,7 @@ import dagger.hilt.android.testing.HiltAndroidTest
 import org.junit.Before
 import org.junit.Rule
 import org.junit.Test
+import java.net.HttpURLConnection
 import javax.inject.Inject
 
 @HiltAndroidTest
@@ -40,6 +41,27 @@ class AlbumListActivityTest {
     }
 
     @Test
+    fun whenServerReturnsEmpty_shouldShowDialogue() {
+        mockWebResponse(jsonAssetPath = "albums_empty.json")
+
+        onActivityLaunched check {
+            emptyStateDialogueIsVisible()
+        }
+    }
+
+    @Test
+    fun withServerError_shouldDisplayDialogue() {
+        mockWebResponse(
+            jsonAssetPath = "albums_empty.json",
+            code = HttpURLConnection.HTTP_INTERNAL_ERROR
+        )
+
+        onActivityLaunched check {
+            serverErrorDialogueIsVisible()
+        }
+    }
+
+    @Test
     fun whenLoading_shouldDisplayShimmer() {
         onActivityLaunched check {
             shimmerIsVisible()
@@ -51,7 +73,7 @@ class AlbumListActivityTest {
         onActivityLaunched perform {
             clickAppInfoMenuItem()
         } check {
-            appInfoDialogueIsVisible(mockDialogueHelper)
+            appInfoDialogueIsVisible()
         }
     }
 }
