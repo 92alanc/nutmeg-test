@@ -1,10 +1,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <!-- DEBUG MANIFEST - ONLY FOR UI TESTS -->
-
-    <application android:usesCleartextTraffic="true">
+    <application>
         <activity android:name=".ui.AlbumListActivity"
-            android:theme="@style/Theme.AppCompat.Light.DarkActionBar" />
+            android:theme="@style/DebugTheme"/>
     </application>
 
 </manifest>

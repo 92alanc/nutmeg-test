@@ -19,7 +19,7 @@ import javax.inject.Inject
 import com.alancamargo.nutmegtest.core.design.R as R2
 
 @AndroidEntryPoint
-internal class AlbumListActivity : AppCompatActivity() {
+class AlbumListActivity : AppCompatActivity() {
 
     private var _binding: ActivityAlbumListBinding? = null
 

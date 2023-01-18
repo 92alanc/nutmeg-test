@@ -13,7 +13,7 @@ fun mockWebResponse(jsonAssetPath: String, code: Int = HttpURLConnection.HTTP_OK
     mockWebServer.enqueue(response)
 }
 
-fun getJsonFromAssets(path: String): String {
+private fun getJsonFromAssets(path: String): String {
     val context = InstrumentationRegistry.getInstrumentation().targetContext
     val assetManager = context.assets
 

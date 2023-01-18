@@ -18,7 +18,10 @@ android {
 dependencies {
     implementation "$android_junit"
     implementation "$android_test_runner"
+    implementation "$android_espresso_core"
     implementation "$coroutines_test"
+    implementation "$android_material"
     implementation "$hilt_testing"
     implementation "$mock_web_server"
+    implementation "$truth"
 }
