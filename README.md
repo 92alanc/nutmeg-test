@@ -60,10 +60,14 @@ comparison.
 |-------|------|-------|------|-------|
 |![App info](screenshots/app-info.png)|![No results](screenshots/no-results.png)|![Network error](screenshots/network-error.png)|![Server error](screenshots/server-error.png)|![Generic error](screenshots/generic-error.png)|
 
+
 **Loading state**
+
 ![Loading state](screenshots/loading.png)
 
+
 **Debug build**
+
 ![Debug build](screenshots/debug.png)
 
 ## Known issues
