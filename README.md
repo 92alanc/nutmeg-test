@@ -2,7 +2,7 @@
 Alan Camargo - Senior Android Engineer
 
 ## Summary
-Using the free Typicode test API, this app gets a list of albums and displays them in a list
+Using the free JSON Placeholder test API, this app gets a list of albums and displays them in a list
 with the thumbnail of their first photo, the title and the creator's user name.
 
 ## Engineering
