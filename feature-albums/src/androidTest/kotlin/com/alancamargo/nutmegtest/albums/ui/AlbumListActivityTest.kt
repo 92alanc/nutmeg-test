@@ -1,5 +1,6 @@
 package com.alancamargo.nutmegtest.albums.ui
 
+import androidx.test.ext.junit.rules.ActivityScenarioRule
 import com.alancamargo.nutmegtest.albums.ui.robot.onActivityLaunched
 import com.alancamargo.nutmegtest.core.design.dialogue.DialogueHelper
 import com.alancamargo.nutmegtest.core.test.mockWebResponse
@@ -15,6 +16,9 @@ class AlbumListActivityTest {
 
     @get:Rule
     val hiltRule = HiltAndroidRule(this)
+
+    @get:Rule
+    val activityScenarioRule = ActivityScenarioRule(AlbumListActivity::class.java)
 
     @Inject
     lateinit var mockDialogueHelper: DialogueHelper
@@ -32,6 +36,17 @@ class AlbumListActivityTest {
 
         onActivityLaunched check {
             recyclerViewItemCountIs(count = 1)
+        }
+    }
+
+    @Test
+    fun whenLoading_shouldDisplayShimmer() {
+        mockWebResponse(jsonAssetPath = "albums_success.json", delayResponse = true)
+        mockWebResponse(jsonAssetPath = "users_success.json", delayResponse = true)
+        mockWebResponse(jsonAssetPath = "photos_success.json", delayResponse = true)
+
+        onActivityLaunched check {
+            shimmerIsVisible()
         }
     }
 }
