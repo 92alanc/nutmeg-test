@@ -11,10 +11,7 @@ import java.net.HttpURLConnection
 
 val mockWebServer = MockWebServer()
 
-fun mockWebResponse(
-    jsonAssetPath: String,
-    code: Int = HttpURLConnection.HTTP_OK
-) {
+fun mockWebResponse(jsonAssetPath: String, code: Int = HttpURLConnection.HTTP_OK) {
     val json = getJsonFromAssets(jsonAssetPath)
     val response = MockResponse().setBody(json).setResponseCode(code)
     mockWebServer.enqueue(response)
