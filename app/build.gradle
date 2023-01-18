@@ -16,7 +16,16 @@ android {
         versionCode version_code
         versionName "$version_name"
 
-        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        testInstrumentationRunner "com.alancamargo.nutmegtest.core.test.InstrumentedTestRunner"
+    }
+
+    signingConfigs {
+        release {
+            keyAlias "key-alias"
+            keyPassword "key-password"
+            storeFile file("path/to/keystore.jks")
+            storePassword "store-password"
+        }
     }
 
     buildTypes {
@@ -25,6 +34,7 @@ android {
         }
 
         release {
+            signingConfig signingConfigs.release
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
@@ -41,6 +51,9 @@ android {
 }
 
 dependencies {
+    implementation project(':core-design')
+    implementation project(':feature-albums')
+
     implementation "$android_core"
     implementation "$android_material"
     implementation "$hilt_android"
