@@ -19,12 +19,22 @@ android {
         testInstrumentationRunner "com.alancamargo.nutmegtest.core.test.InstrumentedTestRunner"
     }
 
+    signingConfigs {
+        release {
+            keyAlias "key-alias"
+            keyPassword "key-password"
+            storeFile file("path/to/keystore.jks")
+            storePassword "store-password"
+        }
+    }
+
     buildTypes {
         debug {
             applicationIdSuffix '.debug'
         }
 
         release {
+            signingConfig signingConfigs.release
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }

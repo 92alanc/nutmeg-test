@@ -75,7 +75,8 @@ class AlbumListActivity : AppCompatActivity() {
                     iconRes = action.error.iconRes,
                     titleRes = R2.string.error,
                     messageRes = action.error.messageRes,
-                    buttonTextRes = R2.string.try_again
+                    buttonTextRes = R2.string.try_again,
+                    onButtonClicked = viewModel::onTryAgainClicked
                 )
             }
 
