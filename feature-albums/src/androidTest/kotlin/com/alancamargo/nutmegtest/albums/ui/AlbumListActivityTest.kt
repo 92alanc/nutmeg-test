@@ -41,12 +41,17 @@ class AlbumListActivityTest {
 
     @Test
     fun whenLoading_shouldDisplayShimmer() {
-        mockWebResponse(jsonAssetPath = "albums_success.json", delayResponse = true)
-        mockWebResponse(jsonAssetPath = "users_success.json", delayResponse = true)
-        mockWebResponse(jsonAssetPath = "photos_success.json", delayResponse = true)
-
         onActivityLaunched check {
             shimmerIsVisible()
+        }
+    }
+
+    @Test
+    fun whenClickingOnAppInfoMenuItem_shouldShowDialogue() {
+        onActivityLaunched perform {
+            clickAppInfoMenuItem()
+        } check {
+            appInfoDialogueIsVisible(mockDialogueHelper)
         }
     }
 }
